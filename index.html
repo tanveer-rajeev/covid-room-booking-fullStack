@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css" />
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/booking.js"></script>
+  <script src="/createAccount.js"></script>
+  <script src="/capacity.js"></script>
+</head>
+
+<body>
+
+  <div id="navDiv">
+    <nav class="navbar  bg-dark">
+      <h1>Covid-19 Room Booking</h1>
+      <a style="font-size: large;" href="/" class="navbar-brand "></a>
+      <ul class="navbar navbar-expand-md justify-content-end ">
+    
+        <li id="logoutLi" class="nav-item" onclick="logout()">
+          <a href="" class="nav-link">Log out</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <div style=" justify-content: center;" id="accountDiv" class=" container p-5">
+    <h2>Create Account</h2>
+
+    <div class="input-group">
+      <label for="">Username</label>
+      <input id="signUp-username" class="inp-style" type="text" name="" placeholder="username">
+      <!-- <input id="flyingFrom" type="text" class="form-control" data-date-end-date="0d" placeholder="New York, United States"> -->
+    </div>
+
+    <div class="input-group">
+      <label for="">Password</label>
+      <!-- <input id="flyingTo" type="text" class="form-control" data-date-end-date="0d" placeholder="New York, United States"> -->
+      <input id="signUp-password" class="inp-style" type="password" name="" placeholder="password">
+    </div>
+
+    <button onClick="signUpConfirmation()" class="btn-style">Sign Up</button>
+    <button onClick="showLogIn()" class="btn-style">Log In</button>
+  </div>
+
+  <!-- login area -->
+
+  <div style=" justify-content: center;"id="loginDiv" class="container p-5">
+    <h2>Login</h2>
+
+    <div class="input-group">
+      <label for="">Username</label>
+      <input id="logIn-username" class="inp-style" type="text" name="" placeholder="username">
+    </div>
+
+    <div class="input-group">
+      <label for="">Password</label>
+      <input id="logIn-password" class="inp-style" type="password" name="" placeholder="password">
+    </div>
+
+    <button onClick="logInConfirmation()" class="btn-style">Log In</button>
+     <button onClick="showSignUp()" class="btn-style">Sign Up</button> 
+  </div>
+
+  <!-- Make Booking -->
+
+
+  <div style=" justify-content: center;"id="bookingDiv" class="container p-5">
+        <h2>Booking working place</h2>
+        <label for="">Room</label>
+        <select name="" id="rooms">
+          <option id="" value="Office 1">Office 1</option>
+          <option value="Office 2">Office 2</option>
+          <option value="Office 3">Office 3</option>
+          <option value="Big Office">Big Office</option>
+          <option value="Boss Office">Boss Office</option>
+          <option value="Additional Office">Additional Office</option>
+        </select>
+
+        <label for="">Date</label>
+        <!-- <input id="flyingTo" type="text" class="form-control" data-date-end-date="0d" placeholder="New York, United States"> -->
+        <input id="bookingDate" class="inp-style" type="date" name="" placeholder="/ /">
+        <label for="">Your name</label>
+        <input id="name" class="inp-style" type="text" name="" placeholder="your name">
+        <button onClick="bookingConfirmation()" class="btn-style">Book</button>
+  </div>
+   
+  <div id="bookingNotification" class="container">
+
+  </div>
+
+  <!-- Get Capacity Area -->
+
+  <div>
+    <div style=" justify-content: center;" id="capacityDiv" class="container p-5">
+      <h2>Amount of current free working place</h2>
+
+      <div class="input-group">
+        <label for="">Get Capacity</label>
+        <input id="searchDate" class="inp-style" type="date" name="" placeholder="username">
+      </div>
+
+      <button onClick="getCapacity()" class="btn-style">Get Capacity</button>
+    </div>
+
+
+    <div id="capacityNotification" class="container p-5">
+
+    </div>
+
+</body>
+
+</html>

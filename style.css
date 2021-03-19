@@ -1,0 +1,104 @@
+body{
+    background-image: url(./images/AvivaEmployees.jpg);
+    background-repeat: no-repeat;
+    background-size: 2300px 1300px;
+}
+
+#navDiv ul li{
+   list-style: none;
+   display: none;
+}
+
+#logoutLi{
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: 20rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: cadetblue;
+    width: 110px;
+    height :40px;
+    font-weight: 700;
+}
+
+h1{
+    text-align: center;
+    padding-left: 42rem;
+    padding-top: 10px;
+
+}
+
+
+#capacityNotification, #loginDiv , #bookingDiv, #capacityDiv,#bookingNotification{
+    display: none;
+} 
+
+
+
+#confirmation{
+  color:green;  
+  font-weight: 700;
+}
+
+#successMessage,#suggestionMessage{
+    color: black;
+}
+
+#suggestion{
+    color: salmon;
+    font-weight: 700;
+}
+
+
+
+#accountDiv,#loginDiv,#bookingDiv,#capacityDiv{
+    border: 1px solid black;
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+     margin-bottom: 30px;
+     background-color: rgb(166, 213, 243);
+     border-radius: 6px;
+     color: black;
+}
+#accountDiv,#loginDiv{
+    margin-top:  100px ;
+}
+#bookingDiv{
+    margin-top: 60px;
+}
+#capacityDiv{
+    margin-top: 80px;
+}
+
+#logIn-username,#logIn-password,#signUp-username,#signUp-password,#bookingDate,#name,#rooms,#searchDate{
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+
+
+#capacityNotification,#bookingNotification{
+   
+    padding-top: 25px;
+    padding-bottom: 23px;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: 700;
+    color: black;
+    width: 40%;
+    margin: auto;
+     margin-top: 19px;
+     margin-bottom: 30px;
+    background-color: white;
+}
+
+#capacityMessage{
+
+    justify-content: center;
+    padding-top: 30px;
+}
